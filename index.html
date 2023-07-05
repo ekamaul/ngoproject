@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
     <title>Mangrove Project (Tugas)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     
     
     
@@ -13,10 +14,11 @@
 
 <body>
     <!-- kotak header -->
-    <div id="boxheader" class=" top-0 left-0 right-0 h-28 bg-black opacity-50 z-100" ></div>
-    <header id="header" class="top-0 left-0 right-0 h-28 fixed">
+    <div id="boxheader" class=" top-0 left-0 right-0 h-28 bg-black opacity-50 z-100 fixed" ></div>
+    
+    <header  class="top-0 left-0 right-0 fixed z-20">
 
-        <div class=" h-28 grid grid-cols-4  text-2xl content-center">
+        <div id="header1" class="  h-28 grid grid-cols-4  text-2xl content-center">
             
             <div class="m-auto items-center justify-center">
                <a  href=""> 
@@ -29,27 +31,11 @@
 
             </div>
     
-            <div class="col-span-2 flex items-center justify-center text-lg gap-5 font-medium text-white">
-                <div class="h-20 grid grid-rows-3 "> 
-                    <div class="border-2 border-red-500 invisible">
-                        Satu
-                    </div>
-                    <div  class="group hover:text-green-400">
-                        <ul class="z-20"> <a href="">Who We Are</a> 
-                            <li class="invisible group-hover:visible hover:text-white"><a href="">History</a> </li>
-                            <li class="invisible group-hover:visible hover:text-white"><a href="">Our Team</a> </li>
-                            
-                        </ul> 
-    
-                    </div>
-                    <div class="invisible hover:visible">
-    
-                        
-                    </div>
+            <div  class="col-span-2 flex items-center justify-center text-lg gap-5 font-medium text-white">
                 
-                </div>
-                <div class="group hover:text-green-400"> <a href="">Our Mission</a> </div>
-                <div class="group hover:text-green-400"> <a href="">Contact Us</a> </div>
+                <div id="itemhead1" class="group hover:text-green-400"> <a href="">Who We Are</a> </div>
+                <div id="itemhead2" class="group hover:text-green-400"> <a href="">Mission</a> </div>
+                <div id="itemhead3" class="group hover:text-green-400"> <a href="">Contact Us</a> </div>
                 <div class="flex items-center justify-center gap-3">
                     <div class="bg-green-400 h-12 w-32 flex items-center justify-center rounded-lg
                     hover:text-green-400 hover:bg-white"> 
@@ -74,8 +60,86 @@
             </div>
             
         </div>
+        <div id="subhead1" class=" h-20 grid grid-cols-4  text-2xl bg-green-900 hidden ">
+            <div class="m-auto items-center justify-center">
+                <a  href=""> 
+                 <img src="" alt="">
+                 
+                </a>
+             </div>
+     
+             <div class=" flex items-center justify-center">
+ 
+             </div>
+     
+             <div class="col-span-2 flex justify-center text-lg gap-5 font-medium text-white items-center">
+                 
+                 <div class="group hover:text-green-400"> <a href="">Meet Our Team</a> </div>
+                 <div class="group hover:text-green-400"> <a href="">History</a> </div>
+                 <div class="group hover:text-green-400"> <a href="">Core Value</a> </div>
+                 <div class="flex justify-center gap-3">
+                     <div class=""> 
+                         <a href="">
+                             <div class="h-12 w-32 flex items-center justify-center none">
+                                 
+                             </div>
+                         </a> 
+                     </div>
+     
+                     <div class=""> 
+                         <a href="">
+                             <div class="h-12 w-32 flex items-center justify-center">
+                                 
+     
+                             </div>
+                         </a>
+                     </div>
+     
+                 </div>
+             </div>
+        </div>
+        <div id="subhead2" class=" h-20 grid grid-cols-4  text-2xl bg-green-900  hidden">
+            <div class="m-auto items-center justify-center">
+                <a  href=""> 
+                 <img src="" alt="">
+                 
+                </a>
+             </div>
+     
+             <div class=" flex items-center justify-center">
+ 
+             </div>
+     
+             <div class="col-span-2 flex justify-center text-lg gap-5 font-medium text-white items-center">
+                 
+                 <div class="group hover:text-green-400"> <a href="">Program</a> </div>
+                 <div class="group hover:text-green-400"> <a href="">Project</a> </div>
+                 <div class="group hover:text-green-400"> <a href="">Education</a> </div>
+                 <div class="flex justify-center gap-3">
+                     <div class=""> 
+                         <a href="">
+                             <div class="h-12 w-32 flex items-center justify-center none">
+                                 
+                             </div>
+                         </a> 
+                     </div>
+     
+                     <div class=""> 
+                         <a href="">
+                             <div class="h-12 w-32 flex items-center justify-center">
+                                 
+     
+                             </div>
+                         </a>
+                     </div>
+     
+                 </div>
+             </div>
+        </div>
 
     </header>
+    
+    
 
     
 
