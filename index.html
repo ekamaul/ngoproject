@@ -1,212 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <title>Mangrove Project (Tugas)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    
-    
-</head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
 
-<body>
+  <body>
     <!-- kotak header -->
-    <div id="boxheader" class=" top-0 left-0 right-0 h-28 bg-black opacity-50 z-100 fixed" ></div>
-    
-    <header  class="top-0 left-0 right-0 fixed z-20">
+    <div
+      id="boxheader"
+      class="top-0 left-0 right-0 h-28 bg-black opacity-50 z-100 fixed"
+    ></div>
 
-        <div id="header1" class="  h-28 grid grid-cols-4  text-2xl content-center">
-            
-            <div class="m-auto items-center justify-center ml-8">
-               <a  href=""> 
-                <img src="./asset/mangrovehead.svg" alt="">
-                
-               </a>
-            </div>
-    
-            <div class=" flex items-center justify-center">
+    <header class="top-0 left-0 right-0 fixed z-20">
+      <div id="header1" class="h-28 grid grid-cols-4 text-2xl content-center">
+        <div class="m-auto items-center justify-center ml-8">
+          <a href="">
+            <img src="./asset/mangrovehead.svg" alt="" />
+          </a>
+        </div>
 
-            </div>
-    
-            <div  class="col-span-2 flex items-center justify-center text-lg gap-5 font-medium text-white">
-                
-                <div id="itemhead1" class="group hover:text-green-400"> <a href="">Who We Are</a> </div>
-                <div id="itemhead2" class="group hover:text-green-400"> <a href="">Mission</a> </div>
-                <div id="itemhead3" class="group hover:text-green-400"> <a href="">Contact Us</a> </div>
-                <div class="flex items-center justify-center gap-3">
-                    <div class="bg-green-400 h-12 w-32 flex items-center justify-center rounded-lg
-                    hover:text-green-400 hover:bg-white"> 
-                        <a href="">
-                            <div class="h-12 w-32 flex items-center justify-center">
-                                Support Us
-                            </div>
-                        </a> 
-                    </div>
-    
-                    <div class="border-green-400 border-4 h-12 w-32 flex items-center justify-center rounded-lg
-                    hover:bg-green-400 focus:text-white"> 
-                        <a href="">
-                            <div class="h-12 w-32 flex items-center justify-center">
-                                Log In
-    
-                            </div>
-                        </a>
-                    </div>
-    
+        <div class="flex items-center justify-center"></div>
+
+        <div
+          class="col-span-2 flex items-center justify-center text-lg gap-5 font-medium text-white"
+        >
+          <div id="itemhead1" class="group hover:text-green-400">
+            <a href="#map">Who We Are</a>
+          </div>
+          <div id="itemhead2" class="group hover:text-green-400">
+            <a href="">Mission</a>
+          </div>
+          <div id="itemhead3" class="group hover:text-green-400">
+            <a href="">Contact Us</a>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <div
+              class="bg-green-400 h-12 w-32 flex items-center justify-center rounded-lg hover:text-green-400 hover:bg-white"
+            >
+              <a href="">
+                <div class="h-12 w-32 flex items-center justify-center">
+                  Support Us
                 </div>
+              </a>
             </div>
-            
+
+            <div
+              class="border-green-400 border-4 h-12 w-32 flex items-center justify-center rounded-lg hover:bg-green-400 focus:text-white"
+            >
+              <a href="">
+                <div class="h-12 w-32 flex items-center justify-center">
+                  Log In
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
-        <div id="subhead1" class=" h-20 grid grid-cols-4  text-2xl bg-green-900 hidden ">
-            <div class="m-auto items-center justify-center">
-                <a  href=""> 
-                 <img src="" alt="">
-                 
-                </a>
-             </div>
-     
-             <div class=" flex items-center justify-center">
- 
-             </div>
-     
-             <div class="col-span-2 flex justify-center text-lg gap-5 font-medium text-white items-center">
-                 
-                 <div class="group hover:text-green-400"> <a href="">Meet Our Team</a> </div>
-                 <div class="group hover:text-green-400"> <a href="">History</a> </div>
-                 <div class="group hover:text-green-400"> <a href="">Core Value</a> </div>
-                 <div class="flex justify-center gap-3">
-                     <div class=""> 
-                         <a href="">
-                             <div class="h-12 w-32 flex items-center justify-center none">
-                                 
-                             </div>
-                         </a> 
-                     </div>
-     
-                     <div class=""> 
-                         <a href="">
-                             <div class="h-12 w-32 flex items-center justify-center">
-                                 
-     
-                             </div>
-                         </a>
-                     </div>
-     
-                 </div>
-             </div>
-        </div>
-        <div id="subhead2" class=" h-20 grid grid-cols-4  text-2xl bg-green-900  hidden">
-            <div class="m-auto items-center justify-center">
-                <a  href=""> 
-                 <img src="" alt="">
-                 
-                </a>
-             </div>
-     
-             <div class=" flex items-center justify-center">
- 
-             </div>
-     
-             <div class="col-span-2 flex justify-center text-lg gap-5 font-medium text-white items-center">
-                 
-                 <div class="group hover:text-green-400"> <a href="">Program</a> </div>
-                 <div class="group hover:text-green-400"> <a href="">Project</a> </div>
-                 <div class="group hover:text-green-400"> <a href="">Education</a> </div>
-                 <div class="flex justify-center gap-3">
-                     <div class=""> 
-                         <a href="">
-                             <div class="h-12 w-32 flex items-center justify-center none">
-                                 
-                             </div>
-                         </a> 
-                     </div>
-     
-                     <div class=""> 
-                         <a href="">
-                             <div class="h-12 w-32 flex items-center justify-center">
-                                 
-     
-                             </div>
-                         </a>
-                     </div>
-     
-                 </div>
-             </div>
+      </div>
+      <div
+        id="subhead1"
+        class="h-20 grid grid-cols-4 text-2xl bg-green-900 hidden"
+      >
+        <div class="m-auto items-center justify-center">
+          <a href="">
+            <img src="" alt="" />
+          </a>
         </div>
 
+        <div class="flex items-center justify-center"></div>
+
+        <div
+          class="col-span-2 flex justify-center text-lg gap-5 font-medium text-white items-center"
+        >
+          <div class="group hover:text-green-400">
+            <a href="">Meet Our Team</a>
+          </div>
+          <div class="group hover:text-green-400"><a href="">History</a></div>
+          <div class="group hover:text-green-400">
+            <a href="">Core Value</a>
+          </div>
+          <div class="flex justify-center gap-3">
+            <div class="">
+              <a href="">
+                <div
+                  class="h-12 w-32 flex items-center justify-center none"
+                ></div>
+              </a>
+            </div>
+
+            <div class="">
+              <a href="">
+                <div class="h-12 w-32 flex items-center justify-center"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="subhead2"
+        class="h-20 grid grid-cols-4 text-2xl bg-green-900 hidden"
+      >
+        <div class="m-auto items-center justify-center">
+          <a href="">
+            <img src="" alt="" />
+          </a>
+        </div>
+
+        <div class="flex items-center justify-center"></div>
+
+        <div
+          class="col-span-2 flex justify-center text-lg gap-5 font-medium text-white items-center"
+        >
+          <div class="group hover:text-green-400"><a href="">Program</a></div>
+          <div class="group hover:text-green-400"><a href="">Project</a></div>
+          <div class="group hover:text-green-400"><a href="">Education</a></div>
+          <div class="flex justify-center gap-3">
+            <div class="">
+              <a href="">
+                <div
+                  class="h-12 w-32 flex items-center justify-center none"
+                ></div>
+              </a>
+            </div>
+
+            <div class="">
+              <a href="">
+                <div class="h-12 w-32 flex items-center justify-center"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-    
-    
 
-    
+    <main class="grid grid-rows-5 gap-0 -z-20">
+      <div class="grid h-36"></div>
 
-    <main class=" grid grid-rows-5 gap-0 -z-20">
-
-        <div class="grid  h-36"> </div>
-            
-    
-        <div class="row-span-3 grid  grid-rows-5">
-            <div class="   m-auto text-7xl text-white font-bold content-center">
-                
-                 <span class="text-green-400">1023</span>  <span id="rove">Mangrove</span>
-                
-
-            </div>
-            <div class="   text-2xl text-white grid grid-rows-2 content-center justify-center justify-items-center mt-3">
-                <div>Telah dan sedang kami tanam di pesisir <span id="lokasi" class="animate-pulse text-green-400 text-3xl font-bold">Jakarta</span></div>
-                <div>dan akan terus berlanjut di pesisir-pesisir selanjutnya.</div>
-                
-            </div>
-            <div class="  row-span-2 m-auto">
-                <img src="./asset/mangrovelogo.svg" alt="">
-
-
-            </div>
-            
-            <div class="  text-4xl text-white m-auto font-medium">
-                Bantu Kami <span class="text-green-500">Menghijaukan</span> <span class="text-blue-400">Pesisir</span>  Indonesia
-            </div>
-                
-    
+      <div class="row-span-3 grid grid-rows-5">
+        <div class="m-auto text-7xl text-white font-bold content-center">
+          <span id="tanam" class="text-green-400">1000</span>
+          <span id="rove">Mangrove</span>
         </div>
-        <div class="grid    grid-rows-4">
-            <div class="row-span-3 text-white text-2xl m-auto font-medium relative">
-                <button class="bg-green-600 p-4 rounded-xl animate-pulse absolute -z-10"> 
-                    <span class="invisible">Pelajari Lebih Lanjut</span> 
-                </button>
-                <button class=" p-4 m-auto">
-                    Pelajari Lebih Lanjut
-
-                </button>
-
-            </div>
-
-            <div class="m-auto text-white">&copy;2023 Eka Maulana Hermawan</div>
-    
+        <div
+          class="text-2xl text-white grid grid-rows-2 content-center justify-center justify-items-center mt-3"
+        >
+          <div>
+            Telah dan sedang kami tanam di pesisir
+            <span
+              id="lokasi"
+              class="animate-pulse text-green-400 text-3xl font-bold"
+              >Jakarta</span
+            >
+          </div>
+          <div>dan akan terus berlanjut di pesisir-pesisir selanjutnya.</div>
         </div>
-        
-            
+        <div class="row-span-2 m-auto">
+          <img src="./asset/mangrovelogo.svg" alt="" />
+        </div>
+
+        <div class="text-4xl text-white m-auto font-medium">
+          Bantu Kami <span class="text-green-500">Menghijaukan</span>
+          <span class="text-blue-400">Pesisir</span> Indonesia
+        </div>
+      </div>
+      <div class="grid grid-rows-4">
+        <div class="row-span-3 text-white text-2xl m-auto font-medium relative">
+          <button class="bg-green-600 p-4 rounded-xl animate-pulse absolute -z-10" href="#map">
+            <span class="invisible">Pelajari Lebih Lanjut</span>
+          </button>
+          <button class="p-4 m-auto" >Pelajari Lebih Lanjut</button>
+        </div>
+
+        <div class="m-auto text-white">&copy;2023 Eka Maulana Hermawan</div>
+      </div>
     </main>
 
-  
-
-    
-    <div id="opa" class="-z-30 bg-black w-full h-screen fixed top-0 left-0 opacity-70 ">
-
-    </div>
+    <div
+      id="opa"
+      class="-z-30 bg-black w-full h-screen fixed top-0 left-0 opacity-70"
+    ></div>
 
     <div class="-z-40 w-full h-screen fixed top-0 left-0 block overflow-hidden">
-        <img class="object-scale-down" src="https://images.unsplash.com/photo-1632807515528-ddd9967acb94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="">
+      <img
+        class="object-scale-down"
+        src="https://images.unsplash.com/photo-1632807515528-ddd9967acb94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+        alt=""
+      />
+    </div>
+    <div style="height: 100px"></div>
 
+    <div class="h-screen" style="height: 560px" id="map">
+      
     </div>
 
-    <div class="h-screen w-full">Test</div>
-
-    
-
     <script src="./src/index.js"></script>
-</body>
+  </body>
 </html>
